@@ -44,7 +44,7 @@ if(isset($_POST['update'])){
    margin: auto;
    padding:0.8rem 1.2rem;
    cursor: pointer;
-   color:white;
+   color:black;
    font-size: 15px;
    border-radius: .5rem;
    text-transform: capitalize;
@@ -55,7 +55,7 @@ if(isset($_POST['update'])){
             color: black;
         }
         .cart-btn2{
-            background-color: rgb(0, 167, 245);
+            background-color: green;
             color: black;
         }
         .message {
@@ -108,7 +108,7 @@ if(isset($_POST['update'])){
                 <th>Name</th>
                 <th>price</th>
                 <th>Quatity</th>
-                <th>Total (₹)</th>
+                <th>Total (UGX)</th>
             </thead>
             <tbody>
                 
@@ -128,7 +128,7 @@ if(isset($_POST['update'])){
                                     <input type="number" name="update_quantity" min="1" max="10" value="<?php echo $row['quantity']; ?>">
                                     <input type="hidden" name="cart_id" value="<?php echo $row['id']; ?>">
                                     <input class="hidden_input" type="hidden" name="book_price" value="<?php echo $row['price'] ?>">
-                                <!-- <input type="submit" name="update" value="update"> -->
+                              
                                 <button style="background:transparent ;" name="update"><img style="height: 26px; cursor:pointer;" src="./images/update1.png" alt="update"></button> | 
                                 <a style="color: red;" href="cart.php?remove=<?php echo $row['id'];?>"> Remove</a>
                                 </form>
@@ -147,7 +147,7 @@ if(isset($_POST['update'])){
                 ?>
                 <tr>
                     <th style="text-align:center;" colspan="3">Total</th>
-                    <th colspan="2">₹ <?php echo $total; ?>/- </th>
+                    <th colspan="2">UGX <?php echo $total; ?>/- </th>
 
                 </tr>
                 
@@ -162,7 +162,7 @@ if(isset($_POST['update'])){
 setTimeout(() => {
   const box = document.getElementById('messages');
 
-  // 👇️ hides element (still takes up space on page)
+  
   box.style.display = 'none';
 }, 5000);
 </script>
